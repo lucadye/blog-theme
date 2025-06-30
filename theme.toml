@@ -1,0 +1,18 @@
+name = 'blog theme'
+license = 'MIT'
+licenselink = 'https://mit-license.org/'
+description = 'A Hugo theme; built for my personal blog.'
+
+# The home page of the theme, where the source can be found
+homepage = 'https://github.com/lucadye/blog-theme'
+
+# demosite = 'https://lucadye.github.io/blog-theme'
+
+# Taxonomy terms
+tags = ['blog', 'personal']
+features = ['blog']
+
+# If the theme has a single author
+[author]
+  name = 'Luca Dye'
+  homepage = 'https://lucadye.com/'

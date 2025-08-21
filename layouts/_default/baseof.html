@@ -7,7 +7,7 @@
   <header>
     {{ partial "header.html" . }}
   </header>
-  <main>
+  <main id="{{ block "id" . }}{{ end }}">
     {{ block "main" . }}{{ end }}
   </main>
   <footer>

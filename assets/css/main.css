@@ -52,7 +52,7 @@ header nav ul ::marker {
 /* Content */
 
 main {
-  max-width: 768px;
+  max-width: 1152px;
   margin: auto;
   margin-top: 0;
   padding-inline: 1rem;
@@ -60,12 +60,11 @@ main {
 
 h1, h2, h3, h4, h5, h6 {
   color: var(--color-dark);
+  font-weight: bold;
 }
 
-article {
-  background-color: var(--color-primary);
-  padding: 1rem;
-  margin-block: 2rem;
+h1 {
+  font-size: 2rem;
 }
 
 a {
@@ -78,10 +77,77 @@ a:hover {
   text-decoration: underline;
 }
 
+img {
+  width: 100%;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
 /* Footer */
 
 footer {
   background-color: var(--color-primary);
   margin-top: 1rem;
   padding: 1rem;
+}
+
+footer > * {
+  width: fit-content;
+  margin-inline: auto;
+}
+
+/* Home page */
+
+main#home > section {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  column-gap: 2%;
+  margin-block: 2rem;
+}
+
+main#home > section > * {
+  width: calc(32%);
+}
+
+main#home > section > * > *:last-child {
+  margin-top: auto;
+}
+
+main#home > section > *.w2-3 {
+  width: calc(66%);
+}
+
+main#home > section > *.w3-3 {
+  width: calc(100%);
+}
+
+main#home > section > h2.w3-3 {
+  text-align: center;
+}
+
+main#home > section > article {
+  width: calc(32% - 2rem);
+  background-color: var(--color-primary);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+main#home > section > article > h3 {
+  margin: 0;
+}
+
+main#home > section > article > a {
+  display: block;
+  margin-top: auto;
+  margin-right: auto;
 }

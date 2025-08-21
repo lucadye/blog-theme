@@ -1,10 +1,28 @@
+{{ define "id" }}home{{ end }}
 {{ define "main" }}
-  {{ .Content }}
-  {{ range site.RegularPages }}
-    <article>
-      <h2>{{ .LinkTitle }}</h2>
-      {{ .Summary }}
-      <a href="{{ .RelPermalink }}">Read more</a>
-    </article>
-  {{ end }}
+  <section>
+    {{ with .Site.Params.HomePageContent }}
+    <div class="w2-3 flex-column">
+      <h1>{{ .heading }}</h1>
+      <p>{{ .text }}</p>
+      <div class="flex-row">
+
+      </div>
+    </div>
+    <img src="{{ .imageSrc }}" alt="{{ .imageAlt }}" title="{{ .imageAlt }}">
+    {{ end }}
+  </section>
+  <section>
+    {{ .Content }}
+  </section>
+  <section>
+    <h2 class="w3-3">Recent Posts</h2>
+    {{ range site.RegularPages }}
+      <article>
+        <h3>{{ .LinkTitle }}</h3>
+        {{ .Summary }}
+        <a href="{{ .RelPermalink }}">Read more</a>
+      </article>
+    {{ end }}
+  </section>
 {{ end }}
